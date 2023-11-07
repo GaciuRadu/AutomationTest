@@ -1,5 +1,5 @@
 # AutomationTest
 
-In terminal- sudo brew services start jenkins-lts0.
+In terminal- start Jenkins- sudo brew services start jenkins-lts.
 
-stop Jenkins-  sudo brew services start jenkins-lts
+In terminal- stop Jenkins-  brew services stop jenkins-lts
