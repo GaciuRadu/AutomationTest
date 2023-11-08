@@ -15,29 +15,6 @@ public class SearchTest extends Hooks {
     }
 
     @Test
-    public void search()  {
-
-        searchPage.searchPage("turcu");
-        searchPage.pushSearchButton();
-        searchPage.searchPageClear();
-        checkoutPage.assertTextWhenReady(searchPage.productShaorma, "SHAORMA LA TURCU");
-        System.out.println("Yes, I see the text1!");
-
-        searchPage.searchPage("shaorma");
-        searchPage.pushSearchButton();
-        searchPage.searchPageClear();
-        checkoutPage.assertTextWhenReady(searchPage.productShaorma, "SHAORMA LA TURCU");
-        System.out.println("Yes, I see the text2!");
-
-//        searchPage.searchPage("shaorma la turcu");
-//        searchPage.pushSearchButton();
-//        System.out.println("Can you search here?");
-//        checkoutPage.assertTextWhenReady(searchPage.productShaorma, "SHAORMA LA TURCU");// asta nu merge pentru ca este un bug!
-//        System.out.println("Yes, I see the text3!");
-
-    }
-
-    @Test
     public void searchRaduTheHandsome(){
         searchPage.searchPage("radu");
         searchPage.pushSearchButton();
@@ -71,6 +48,29 @@ public class SearchTest extends Hooks {
         searchPage.searchPageClear();
         checkoutPage.assertTextWhenReady(searchPage.productShaorma, "ENGAGEMENT RING");
         System.out.println("Yes, I see the text2!");
+
+    }
+
+    @Test
+    public void searchShaormaLaTurcu()  {
+
+        searchPage.searchPage("turcu");
+        searchPage.pushSearchButton();
+        searchPage.searchPageClear();
+        checkoutPage.assertTextWhenReady(searchPage.productShaorma, "SHAORMA LA TURCU");
+        System.out.println("Yes, I see the text1!");
+
+        searchPage.searchPage("shaorma");
+        searchPage.pushSearchButton();
+        searchPage.searchPageClear();
+        checkoutPage.assertTextWhenReady(searchPage.productShaorma, "SHAORMA LA TURCU");
+        System.out.println("Yes, I see the text2!");
+
+        searchPage.searchPage("shaorma la turcu");
+        searchPage.pushSearchButton();
+        System.out.println("Can you search here?");
+        checkoutPage.assertTextWhenReady(searchPage.productShaorma, "SHAORMA LA TURCU");// asta nu merge pentru ca este un bug!
+        System.out.println("Yes, I see the text3!");
 
     }
 
