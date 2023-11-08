@@ -15,7 +15,7 @@ public class SearchTest extends Hooks {
     }
 
     @Test
-    public void search() throws InterruptedException {
+    public void search()  {
 
         searchPage.searchPage("turcu");
         searchPage.pushSearchButton();
